@@ -43,12 +43,18 @@
     };
 
     // and think we make a copy:
-
+    const captain = person;
+    captain.number= 99;
     // how do we take a copy instead?
-
+Object.assign({}, person, {number: 99});
+//this takes a blank object then folds in the info from the object, and then our own information
     // We will hopefully soon see the object ...spread
+    // const cap3 = {...person};
+      //spread syntax, only extends to child element, not any grandchildren
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+    
 
   </script>
 
