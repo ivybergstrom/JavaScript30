@@ -42,7 +42,18 @@
 
 <button></button>
 <script>
+  const divs = document.querySelectorAll('div');
 
+  function logText(e){
+    ///e.stopPropogation();
+    //browser starts at lowest, stop bubbbling, no longer triggers events on parent elements
+    //console.log(this.classList.value);
+  }
+
+  divs.forEach(div => div.addEventListener('click', logText {
+    capture: false,
+    once: true //listens for a click, then unbinds itself
+  }));
 </script>
 </body>
 </html>
